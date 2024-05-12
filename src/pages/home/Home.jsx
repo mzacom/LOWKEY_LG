@@ -23,11 +23,14 @@ const Home = () => {
   return (
     <>
       {/* Section A (Navbar and Hero section)  */}
-      <section className={` ${styles.section} ${styles.paddingY} `}>
+      <section className={` ${styles.section}  `}>
         {!showPage && <CarAnimation onComplete={handleAnimationComplete} />}
         {!showPage && <TextAnimation onComplete={handleAnimationComplete} />}
         {showPage && <NavBar />}
+        {showPage && <Hero />}
       </section>
+
+      
     </>
   );
 };

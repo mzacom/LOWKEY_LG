@@ -15,6 +15,7 @@ import fl5 from './fl5.png'
 import fl6 from './fl6.png'
 import fl7 from './fl7.png'
 import carAmt from "./carAmt.png"
+import heroTruck from './heroTruck.png'
 
 
 export {
@@ -34,5 +35,6 @@ export {
     fl5,
     fl6,
     fl7,
-    carAmt
+    carAmt,
+    heroTruck,
 }

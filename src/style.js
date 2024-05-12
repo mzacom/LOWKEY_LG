@@ -9,9 +9,9 @@ const styles = {
     flexCol: "flex flex-col  justify-center items-center",
     flexRow: "flex flex-row justify-center items-center",
 
-    paddingX: "sm:px-16 px-6",
+    paddingX: "sm:px-[4.5rem] px-7",
     paddingX2: "sm:px-16 px-6",
-    paddingY: "sm:py-10 py-4",
+    paddingY: "sm:py-3 py-2",
     padding: "sm:px-16 px-2 sm:py-12 py-4",
   
     marginX: "sm:mx-16 mx-6",
@@ -22,7 +22,7 @@ const styles = {
     boldText: `font-bold text-x sm:text-xl `,
     boldText50: `font-extrabold text-2xl sm:text-3xl `,
     boldText100: `font-extrabold text-3xl sm:text-4xl `,
-    boldText150: `font-extrabold text-4xl sm:text-5xl `,
+    boldText150: `font-extrabold text-3xl sm:text-7xl md:text-6xl`,
 
     rounded: "rounded-xl",
     rounded50: "rounded-2xl",
@@ -39,8 +39,10 @@ const styles = {
 
     btnPadding:"sm:p-3 p-2  rounded-full ",
 
-    hidden: " block sm:hidden"
+    hidden: " flex sm:hidden",
+    hidden2: " sm:flex hidden",
     
+    heroPaddingY: ' py-[4rem] sm:py-[10rem] ',
 }
 
 export const layout = {
