@@ -7,6 +7,7 @@ import {
   Why,
   Get,
   Footer,
+  OurCompany,
 } from "../../components";
 
 import styles from "../../style";
@@ -20,6 +21,7 @@ const Home = () => {
     
         <NavBar />
         <Hero />
+        <OurCompany/>
       </section>
     </>
   );

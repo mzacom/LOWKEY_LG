@@ -2,6 +2,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import styles from "../style";
 import { motion } from "framer-motion";
 import heroTruck from "../assets/heroTruck.png"; // Ensure this path is correct
+import IntoBtns from "./IntoBtns";
 
 const Hero = () => {
   // Placeholder image for suspense fallback
@@ -64,14 +65,25 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
-                className="mt-2 sm:w-[50%] text-slate-600"
+                className="mt-2 sm:w-[60%] text-slate-600"
               >
                 Your partner for exceptional logistics and courier services. Get
                 transparent pricing, peace of mind, accelerated business growth,
                 and 60-minute collection anywhere in the UK – request a quote now.
               </motion.p>
+
+                {/* Into Buttons */}
+          <section className={`w-full ${styles.hidden2} `} >
+            <IntoBtns/>
+          </section>
           </div>
 
+          {/* Into Buttons */}
+          <section className={`w-full ${styles.hidden} `} >
+            <IntoBtns/>
+          </section>
+
+          {/* Drive in truck */}
           <div className="App sm:w-[1000px] ">
             <Suspense fallback={<Placeholder />}>
               <ImageComponent

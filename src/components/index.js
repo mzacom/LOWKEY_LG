@@ -7,8 +7,11 @@ import Services from "./Services";
 import Why from "./Why";
 import CarAnimation from "./CarAmination";
 import TextAnimation from "./TextAnimation";
+import IntoBtns from "./IntoBtns";
+import OurCompany from "./OurCompany";
 
 export {
+  IntoBtns,
   About,
   Footer,
   Get,
@@ -18,4 +21,5 @@ export {
   Why,
   CarAnimation,
   TextAnimation,
+  OurCompany,
 };
