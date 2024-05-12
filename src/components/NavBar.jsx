@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import styles from "../style";
 import { navLinks } from "../constants";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   // Nav Toggle
@@ -13,7 +13,6 @@ const NavBar = () => {
         className={`${styles.spaceBtw} z-[150] fixed w-full ${styles.whiteBg} ${styles.paddingY} `}
       >
         {/* logo */}
-
         <p
           className={`${styles.boldText} ${styles.limeBg} ${styles.blackTx} ${styles.btnPadding}  `}
         >
@@ -24,46 +23,16 @@ const NavBar = () => {
         <section
           className={`  items-center flex ${styles.hidden2} gap-[4rem] `}
         >
-          {navLinks.map((navs) => {
-            return (
-              <ul
-                className={({ isActive }) =>
-                  isActive ? `flex flex-row bg-[lime]` : "  "
-                }
-                key={navs.id}
-              >
-                <li>
-                  <a href={`#${navs.id}`}>{navs.title}</a>
-                </li>
-              </ul>
-            );
-          })}
+          {navLinks.map((navs) => (
+            <NavLink
+              key={navs.id}
+              to={`#${navs.id}`}
+              activeClassName="bg-[lime] hover:text-[lime]"
+            >
+              {navs.title}
+            </NavLink>
+          ))}
 
-          {/* Bookings Shortcuts and Fleets */}
-          <section
-            className={`flex gap-2 ${styles.greyBg} p-1 px-4 rounded-full  `}
-          >
-            <NavLink
-              to={"bookings"}
-              className={({ isActive }) =>
-                isActive
-                  ? " bg-[lime] "
-                  : " hover:bg-[lime] flex items-center rounded-full w-[40px] h-[40px] p-2 "
-              }
-            >
-              <i class="fa-solid fa-book text-2xl "></i>
-            </NavLink>
-            <NavLink
-              to={"bookings"}
-              className={({ isActive }) =>
-                isActive
-                  ? " bg-[lime] "
-                  : " hover:bg-[lime] flex items-center rounded-full w-[40px] h-[40px] p-2 "
-              }
-            >
-              <i class="fa-solid fa-truck-fast text-2xl "></i>
-            </NavLink>
-          </section>
         </section>
 
         {/* Nav Shortcuts */}
@@ -73,31 +42,44 @@ const NavBar = () => {
             className={`flex gap-1 ${styles.greyBg} p-[6px] px-2 rounded-full  `}
           >
             <NavLink
-              to={"bookings"}
+              to={"/"}
+              activeClassName="bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] "
               className={({ isActive }) =>
                 isActive
-                  ? " bg-[lime] "
-                  : " hover:bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1 "
+                  ? "bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1 "
+                  : "flex items-center justify-center rounded-full w-[35px] h-[35px] p-1 "
               }
             >
-              <i class="fa-solid fa-book text-xl "></i>
+              <i className="fa-solid fa-home text-xl "></i>
             </NavLink>
             <NavLink
-              to={"bookings"}
+              to={"/bookings"}
+              activeClassName="bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px]"
               className={({ isActive }) =>
                 isActive
-                  ? " bg-[lime] "
-                  : " hover:bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1 "
+                  ? "bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1 "
+                  : "flex items-center justify-center rounded-full w-[35px] h-[35px] p-1 "
               }
             >
-              <i class="fa-solid fa-truck-fast text-xl "></i>
+              <i className="fa-solid fa-book text-xl "></i>
+            </NavLink>
+            <NavLink
+              to={"/fleets"}
+              activeClassName="bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] "
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1 "
+                  : "flex items-center justify-center rounded-full w-[35px] h-[35px] p-1 "
+              }
+            >
+              <i className="fa-solid fa-truck-fast text-xl "></i>
             </NavLink>
           </section>
 
           {/* Toggle button */}
           <i
             onClick={() => setToggle(!toggle)}
-            class={`fa-solid ${
+            className={`fa-solid ${
               toggle ? "fa-xmark ml-[-15px] " : "fa-ellipsis-vertical "
             } text-3xl font-extrabold ${styles.hidden} `}
           ></i>
@@ -112,21 +94,19 @@ const NavBar = () => {
           toggle ? " flex  " : " hidden "
         }  fixed flex-col  `}
       >
-        {navLinks.map((navs) => {
-          return (
-            <ul key={navs.id} className=" text-2xl">
-              <li
-                id={navs.id}
-                className={` hover:bg-[lime] w-full p-2 rounded-lg `}
-              >
-                {navs.title}
-              </li>
-            </ul>
-          );
-        })}
+        {navLinks.map((navs) => (
+          <NavLink
+            key={navs.id}
+            to={`#${navs.id}`}
+            activeClassName="bg-[lime]"
+            className="hover:bg-[lime] w-full p-2 rounded-lg text-2xl"
+          >
+            {navs.title}
+          </NavLink>
+        ))}
       </section>
 
-      {/* ovelay */}
+      {/* overlay */}
       <div
         onPointerEnter={() => setToggle(!toggle)}
         className={`${styles.hidden} w-full h-full  ${
