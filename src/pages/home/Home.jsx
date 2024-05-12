@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import {
   NavBar,
   Hero,
@@ -13,15 +14,20 @@ import {
 import styles from "../../style";
 
 const Home = () => {
-  
-
   return (
     <>
       <section className={`${styles.section}`}>
-    
         <NavBar />
         <Hero />
-        <OurCompany/>
+
+        {/* Our company */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+        >
+          <OurCompany />
+        </motion.div>
       </section>
     </>
   );
