@@ -14,6 +14,17 @@ import {
 import styles from "../../style";
 
 const Home = () => {
+  const [showOurCompany, setShowOurCompany] = useState(false);
+
+  useEffect(() => {
+    // Simulate delay for the truck to drive in
+    const timer = setTimeout(() => {
+      setShowOurCompany(true);
+    }, 3000); // Adjust the duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <section className={`${styles.section}`}>
@@ -21,13 +32,15 @@ const Home = () => {
         <Hero />
 
         {/* Our company */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 3 }}
-        >
-          <OurCompany />
-        </motion.div>
+        {showOurCompany && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }} // Adjust the duration as needed
+          >
+            <OurCompany />
+          </motion.div>
+        )}
       </section>
     </>
   );
