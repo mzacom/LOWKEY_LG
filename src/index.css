@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "slick-carousel/slick/slick.css"; 
+@import "slick-carousel/slick/slick-theme.css";
+
 :root {
   --black-gradient: linear-gradient(
     144.39deg,
@@ -93,4 +96,19 @@
 .isActive {
   @apply text-[lime] font-bold text-[15px] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1;
   color: lime;
+}
+
+
+.blur-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  backdrop-filter: blur(3px) saturate(200%);
+  -webkit-backdrop-filter: blur(3px) saturate(200%);
+  z-index: 1;
+  @apply rounded-t-2xl
 }

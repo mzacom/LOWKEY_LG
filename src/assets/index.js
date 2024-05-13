@@ -17,6 +17,7 @@ import fl7 from './fl7.png'
 import carAmt from "./carAmt.png"
 import heroTruck from './heroTruck.png'
 import deliveryImg from "./deliveryImg.jpg"
+import deliverToday from "./deliverToday.jpg"
 
 
 export {
@@ -38,5 +39,6 @@ export {
     fl7,
     carAmt,
     heroTruck,
-    deliveryImg
+    deliveryImg,
+    deliverToday
 }
