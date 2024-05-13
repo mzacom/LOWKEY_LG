@@ -90,7 +90,7 @@ const NavBar = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                 ? "bg-lime flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
+                 ? "bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
                   : "flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
               }
             >
@@ -100,7 +100,7 @@ const NavBar = () => {
               to="/bookings"
               className={({ isActive }) =>
                 isActive
-                 ? "bg-lime flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
+                 ? "bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
                   : "flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
               }
             >
@@ -110,7 +110,7 @@ const NavBar = () => {
               to="/fleets"
               className={({ isActive }) =>
                 isActive
-                 ? "bg-lime flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
+                 ? "bg-[lime] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
                   : "flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
               }
             >
