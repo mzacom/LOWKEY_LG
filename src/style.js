@@ -21,7 +21,7 @@ const styles = {
 
     boldText: `font-bold text-x sm:text-xl `,
     boldText50: `font-extrabold text-2xl sm:text-3xl `,
-    boldText100: `font-extrabold text-3xl sm:text-4xl `,
+    boldText100: `font-extrabold text-xl sm:text-4xl `,
     boldText150: `font-extrabold text-3xl sm:text-7xl md:text-6xl`,
 
     rounded: "rounded-xl",
@@ -37,7 +37,7 @@ const styles = {
     whiteBg:"bg-[#FFFFFF]",
     whiteTx:"text-[#FFFFFF]",
 
-    btnPadding:"sm:p-3 p-2  rounded-full ",
+    btnPadding:"sm:p-1 sm:px-3 p-2  rounded-full ",
 
     hidden: " flex sm:hidden",
     hidden2: " sm:flex hidden",

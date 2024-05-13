@@ -50,7 +50,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 50 }}
               className={`text-[13px] sm:text-xl font-medium`}
             >
-              Welcome to <span className="text-[lime]">LOWKEY</span> Logistics
+              Welcome to <span className="text-[lime] font-bold ">LOWKEY</span> Logistics
             </motion.div>
             <motion.div
               initial={{ y: "3vh" }} // Start from above the viewport

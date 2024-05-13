@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --black-gradient: linear-gradient(
     144.39deg,
@@ -19,7 +18,6 @@
   scroll-behavior: smooth;
   font-family: Urbanist;
 }
-
 
 .sidebar {
   -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -64,7 +62,6 @@
   border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
-
 /* style.css */
 .placeholder {
   background-color: #ccc; /* Adjust based on your design */
@@ -83,7 +80,17 @@
 }
 
 @keyframes driveFromRight {
-  from { opacity: 0; transform: translateX(100%); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
+.isActive {
+  @apply text-[lime] font-bold text-[15px] flex items-center justify-center rounded-full w-[35px] h-[35px] p-1;
+  color: lime;
+}

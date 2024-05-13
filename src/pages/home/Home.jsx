@@ -18,7 +18,11 @@ const Home = () => {
     <>
       <section className={`${styles.section}`}>
         <NavBar />
+
+        <div id="/" >
         <Hero />
+
+        </div>
 
         {/* Our company */}
         <motion.div
