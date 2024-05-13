@@ -1,8 +1,14 @@
 import React from 'react'
+import styles from '../style'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <>
+    <section className={`${styles.paddingX}`}>
+      Service
+    </section>
+    
+    </>
   )
 }
 

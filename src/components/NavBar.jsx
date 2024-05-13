@@ -19,8 +19,7 @@ const NavBar = () => {
         </p>
 
         {/* Nav Bar list Desktop */}
-
-        <section className={`items-center flex ${styles.hidden2} gap-[5rem]`}>
+        <section className={`items-center flex ${styles.hidden2} md:gap-[7rem] sm:gap-[3rem] xl:gap-[10rem] gap-[5rem]`}>
 
           
           <NavLink

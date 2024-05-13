@@ -32,6 +32,8 @@ const Home = () => {
         >
           <OurCompany />
         </motion.div>
+
+        <Services/> 
       </section>
     </>
   );

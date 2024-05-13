@@ -1,5 +1,5 @@
 const styles = {
-    boxWidth: 'xl:max-w-[1280px',
+    boxWidth: 'xl:max-w-[1280px]',
 
     heading2: " font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
     paragraph: " font-normal text-dimWhite text-[18px] leading-[30.8px]",
@@ -21,8 +21,8 @@ const styles = {
 
     boldText: `font-bold text-x sm:text-xl `,
     boldText50: `font-extrabold text-2xl sm:text-3xl `,
-    boldText100: `font-extrabold text-xl sm:text-4xl `,
-    boldText150: `font-extrabold text-3xl sm:text-7xl md:text-6xl`,
+    boldText100: `font-extrabold text-xl md:text-4xl `,
+    boldText150: `font-extrabold text-3xl  md:text-6xl`,
 
     rounded: "rounded-xl",
     rounded50: "rounded-2xl",
