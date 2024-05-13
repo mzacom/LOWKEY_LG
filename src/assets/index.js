@@ -18,7 +18,8 @@ import carAmt from "./carAmt.png"
 import heroTruck from './heroTruck.png'
 import deliveryImg from "./deliveryImg.jpg"
 import deliverToday from "./deliverToday.jpg"
-
+import nextDay from "./nextDay.jpg"
+import multiDrop from "./multiDrop.jpg"
 
 export {
     truck,
@@ -40,5 +41,7 @@ export {
     carAmt,
     heroTruck,
     deliveryImg,
-    deliverToday
+    deliverToday,
+    nextDay,
+    multiDrop
 }
