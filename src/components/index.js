@@ -3,12 +3,13 @@ import Footer from "./Footer";
 import Get from "./Get";
 import Hero from "./Hero";
 import NavBar from "./NavBar";
-import Services from "./Services";
+import ServicesH from "./SevicesH";
 import Why from "./Why";
 import CarAnimation from "./CarAmination";
 import TextAnimation from "./TextAnimation";
 import IntoBtns from "./IntoBtns";
 import OurCompany from "./OurCompany";
+
 
 export {
   IntoBtns,
@@ -17,9 +18,10 @@ export {
   Get,
   Hero,
   NavBar,
-  Services,
+  ServicesH,
   Why,
   CarAnimation,
   TextAnimation,
   OurCompany,
+ 
 };

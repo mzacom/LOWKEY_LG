@@ -4,11 +4,12 @@ import {
   NavBar,
   Hero,
   About,
-  Services,
+  ServicesH,
   Why,
   Get,
   Footer,
   OurCompany,
+
 } from "../../components";
 
 import styles from "../../style";
@@ -19,9 +20,8 @@ const Home = () => {
       <section className={`${styles.section}`}>
         <NavBar />
 
-        <div id="/" >
-        <Hero />
-
+        <div id="/">
+          <Hero />
         </div>
 
         {/* Our company */}
@@ -33,7 +33,8 @@ const Home = () => {
           <OurCompany />
         </motion.div>
 
-        <Services/> 
+        <ServicesH />
+      
       </section>
     </>
   );
