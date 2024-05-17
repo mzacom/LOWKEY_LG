@@ -1,4 +1,4 @@
-const navLinks = [
+export const navLinks = [
   {
     id: "home",
     title: "Home",
@@ -62,15 +62,42 @@ export const ServiceData = [
   {
     icon: RxReader,
     title: "Overnight Delivery",
-    content: "We attend to our customers rapidly and respond to their critical needs to get a consignment delivered on time the next day within a tight deadline.",
+    content:
+      "We attend to our customers rapidly and respond to their critical needs to get a consignment delivered on time the next day within a tight deadline.",
     backgroundImage: nextDay,
   },
   {
     icon: RxAccessibility,
     title: "Parcels Delivery",
-    content: "We assist many customers with parcels to be delivered nationwide to keep their reputation with their partners",
+    content:
+      "We assist many customers with parcels to be delivered nationwide to keep their reputation with their partners",
     backgroundImage: multiDrop,
   },
 ];
 
-export { navLinks };
+export const whyUs = [
+  {
+    title: "Seamless Delivery Service",
+    items:
+      "Your orders are delivered promptly and effectively by our knowledgeable logistics team, guaranteeing that youb receive yopur order on time and in good conditions.",
+    icon: "fa-solid fa-truck-ramp-box",
+  },
+  {
+    title: "Affordable Price",
+    items:
+      "We provide affordable service costs to every location in the Uk guaranteeing that you get the most for your money.",
+    icon: "fa-solid fa-money-bills",
+  },
+  {
+    title: "Professionalism",
+    items:
+      "Our staff members have undergone extensive training to handle your services using the most recent technology and the best standards in the business.",
+    icon: "fa-solid fa-user-tie",
+  },
+  {
+    title: "Excellent Customer Service",
+    items:
+      "The satisfaction of our customers is crucial to us because they are the reason we are in business.",
+    icon: "fa-solid fa-signal",
+  },
+];

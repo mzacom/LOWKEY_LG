@@ -9,7 +9,6 @@ import {
   Get,
   Footer,
   OurCompany,
-
 } from "../../components";
 
 import styles from "../../style";
@@ -26,15 +25,14 @@ const Home = () => {
 
         {/* Our company */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 5 }}
+          whileInView={{ y: [80, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <OurCompany />
         </motion.div>
 
         <ServicesH />
-      
+        <Why />
       </section>
     </>
   );

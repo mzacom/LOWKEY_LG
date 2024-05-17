@@ -18,7 +18,7 @@ export {
   Get,
   Hero,
   NavBar,
-  ServicesH,
+  ServicesH, 
   Why,
   CarAnimation,
   TextAnimation,

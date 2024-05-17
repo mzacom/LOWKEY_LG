@@ -14,7 +14,7 @@ const styles = {
     paddingY: "sm:py-3 py-2",
     padding: "sm:px-16 px-2 sm:py-12 py-4",
   
-    marginX: "sm:mx-16 mx-6",
+    marginX: "sm:mx-16 mx-6", 
     marginY: "sm:my-16 my-6",
 
     spaceBtw: `flex flex-row justify-between items-center sm:px-16 px-6 `,

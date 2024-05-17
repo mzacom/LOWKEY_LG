@@ -25,7 +25,7 @@ const Hero = () => {
         className="truck-animation h-auto"
         initial={{ x: "100vw", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
       />
     ) : null;
   };
