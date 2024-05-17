@@ -1,4 +1,4 @@
-const styles = {
+const styles = { 
     boxWidth: 'xl:max-w-[1280px]',
 
     heading2: " font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
@@ -12,7 +12,7 @@ const styles = {
     paddingX: "sm:px-[4.5rem] px-7",
     paddingX2: "sm:px-16 px-6",
     paddingY: "sm:py-3 py-2",
-    padding: "sm:px-16 px-2 sm:py-12 py-4",
+    padding: "sm:px-16 px-2 sm:py-12 py-5",
   
     marginX: "sm:mx-16 mx-6", 
     marginY: "sm:my-16 my-6",

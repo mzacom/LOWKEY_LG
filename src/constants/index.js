@@ -81,23 +81,27 @@ export const whyUs = [
     items:
       "Your orders are delivered promptly and effectively by our knowledgeable logistics team, guaranteeing that youb receive yopur order on time and in good conditions.",
     icon: "fa-solid fa-truck-ramp-box",
+    delay: 0.3,
   },
   {
     title: "Affordable Price",
     items:
       "We provide affordable service costs to every location in the Uk guaranteeing that you get the most for your money.",
     icon: "fa-solid fa-money-bills",
+    delay: 0.5,
   },
   {
     title: "Professionalism",
     items:
       "Our staff members have undergone extensive training to handle your services using the most recent technology and the best standards in the business.",
     icon: "fa-solid fa-user-tie",
+    delay: 0.7,
   },
   {
     title: "Excellent Customer Service",
     items:
       "The satisfaction of our customers is crucial to us because they are the reason we are in business.",
     icon: "fa-solid fa-signal",
+    delay: 0.9,
   },
 ];

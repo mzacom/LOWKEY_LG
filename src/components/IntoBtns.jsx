@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../style";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const IntoBtns = () => {
   return (
     <>
@@ -10,16 +11,18 @@ const IntoBtns = () => {
         transition={{ duration: 2 }}
         className={` flex w-full gap-4 item-start mt-[1rem] sm:text-2xl  `}
       >
-        <button
-          className={` bg-[lime] ${styles.btnPadding} text-xl sm:px-[20px] px-[15px] `}
+        <Link
+          to={"bookings"}
+          className={` bg-[lime] ${styles.btnPadding} sm:p-[20px] text-xl sm:px-[20px] px-[15px] `}
         >
           Book Now
-        </button>
-        <button
-          className={` bg-[lime] ${styles.btnPadding} px-[15px] sm:px-[20px] `}
+        </Link>
+        <Link
+          to={"contactUs"}
+          className={` bg-[lime] ${styles.btnPadding} sm:p-[20px] px-[15px] sm:px-[20px] `}
         >
           Contact Us
-        </button>
+        </Link>
       </motion.section>
     </>
   );

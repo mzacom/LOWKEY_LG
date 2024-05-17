@@ -74,7 +74,7 @@ const Hero = () => {
             <section className={`w-full ${styles.hidden2} md:hidden`}>
               <IntoBtns />
             </section>
-            <section className={`w-full ${styles.hidden} hidden md:block`}>
+            <section className={`w-full ${styles.hidden}  md:block`}>
               <IntoBtns />
             </section>
           </section>
