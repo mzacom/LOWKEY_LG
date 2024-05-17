@@ -53,8 +53,8 @@ const ServicesH = () => {
 
               <div className="relative  flex flex-col gap-3">
                 <item.icon className="text-[lime] group-hover:text-[lime] w-[32px] h-[32px]" />
-                <h1 className="text-xl lg:text-2xl">{item.title} </h1>
-                <p className="lg:text-[18px] text-[10px]  ">{item.content} </p>
+                <h1 className="text-2xl font-bold lg:text-2xl">{item.title} </h1>
+                <p className="lg:text-[18px] text-xl   ">{item.content} </p>
               </div>
               <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-[lime] group-hover:rotate-45 duration-100" />
             </div>
