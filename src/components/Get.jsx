@@ -28,10 +28,10 @@ const Get = () => {
         <h1 className='sm:text-2xl font-bold mt-6 text-xs  ' >Follow us   </h1>
 
 
-        <div className=' flex gap-7 pt-3' >
-          <i className=' fa-brands text-[lime] fa-whatsapp '></i>
-          <i className=' fa-brands text-[lime] fa-instagram '></i>
-          <i className=' fa-brands fa-facebook text-[lime] '></i>
+        <div className=' flex gap-7 pt-3 sm:text-2xl  ' >
+          <a href=' https://wa.me/2349041589381' className=' fa-brands text-[lime] fa-whatsapp '></a>
+          <a href=' https://www.instagram.com/low.key_dev?igsh=MWl4NXk5OTJ2aXBmNw%3D%3D&utm_source=qr' className=' fa-brands text-[lime] fa-instagram '></a>
+          <a  href=' ' className=' fa-brands fa-facebook text-[lime] '></a>
         </div>
 
 
