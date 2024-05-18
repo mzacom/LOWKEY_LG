@@ -138,3 +138,9 @@
     transform: translateX(-100%);
   }
 }
+
+/* Footer.css */
+svg {
+  width: 700p;
+  height: 700px;
+}

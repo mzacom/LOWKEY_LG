@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "axios": "^1.6.8",
     "framer-motion": "^11.1.9",
     "ionicons": "^7.4.0",
     "react": "^18.2.0",

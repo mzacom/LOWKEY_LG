@@ -9,6 +9,7 @@ import CarAnimation from "./CarAmination";
 import TextAnimation from "./TextAnimation";
 import IntoBtns from "./IntoBtns";
 import OurCompany from "./OurCompany";
+import Message from "./Message";
 
 
 export {
@@ -23,5 +24,6 @@ export {
   CarAnimation,
   TextAnimation,
   OurCompany,
+  Message,
  
 };

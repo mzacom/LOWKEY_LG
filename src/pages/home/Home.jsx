@@ -24,16 +24,14 @@ const Home = () => {
         </div>
 
         {/* Our company */}
-        <motion.div
-          whileInView={{ y: [80, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.3, delay: 0.3 }}
-        >
+        <div>
           <OurCompany />
-        </motion.div>
+        </div>
 
         <ServicesH />
         <Why />
-        <Get/>
+        <Get />
+        <Footer/>
       </section>
     </>
   );

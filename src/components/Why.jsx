@@ -39,12 +39,12 @@ const Why = () => {
           className={` flex w-full gap-4 item-center  mt-5 justify-center  sm:text-2xl  `}
         >
           <Link to={'bookings'}
-            className={` [...] transition-colors-black duration-300 sm:px-[28px] ease-in-out delay- bg-[white] ${styles.btnPadding} hover:border-[2px] hover:border-black sm:p-4 text-xl sm:px-[20px] px-[15px] `}
+            className={` shadow-lg [...] transition-colors-black duration-300 ease-in-out delay sm:px-[28px]  bg-[white] ${styles.btnPadding} hover:border-[2px] hover:border-black sm:p-4 text-xl sm:px-[20px] px-[15px] `}
           >
             Book Now
           </Link>
           <Link to={"contactUs"}
-            className={`[...] transition-colors-black items-center flex duration-300 ease-in-out delay bg-[white] ${styles.btnPadding} hover:border-[2px] hover:border-black  px-[15px] sm:px-[20px] `}
+            className={` shadow-lg [...] transition-colors-black items-center flex duration-300 ease-in-out delay bg-[white] ${styles.btnPadding} hover:border-[2px] hover:border-black  px-[15px] sm:px-[20px] `}
           >
             Contact Us
           </Link>

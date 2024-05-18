@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../style";
 import { deliveryImg } from "../assets";
-
+import { motion } from "framer-motion";
 
 const OurCompany = () => {
   return (
@@ -12,13 +12,15 @@ const OurCompany = () => {
           backgroundImage: `linear-gradient(to right, rgba(0, 255, 0, 0.292), rgba(0, 255, 0, 0.297)), url(${deliveryImg})`,
         }}
       >
-        <section
+        <motion.section
+          whileInView={{ y: [80, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.2, delay: 0.2 }}
           className={` ${styles.paddingY} card2 flex md:gap-[30px] md:p-[6rem] gap-2 items-center flex-col w-full h-auto p-[40px] py-[30px] `}
         >
-
-
-          <p className={`${styles.boldText100}  text- mt-[5px] `}> About{" "}
-            <span className="text-[white] font-bold ">LOWKEY</span> Logistics
+          <p className={`${styles.boldText100}  text- mt-[5px] `}>
+            {" "}
+            About <span className="text-[white] font-bold ">LOWKEY</span>{" "}
+            Logistics
           </p>
 
           <p className=" md:w-[80%] md:text-xl text- md:text-left mt-1 text-[13px] ">
@@ -26,9 +28,11 @@ const OurCompany = () => {
             United Kingdom. Our commitment to delivering outstanding service is
             a driving force behind our success and our company’s continued
             growth and prosperity. <br /> <br className=" hidden md:block " />{" "}
-            <span  className="hidden sm:block " >This made us have a customer base that is very stable with a lot of
-            extremely long-term customer relationship that is based on our
-            constant ability to provide exceptional service.</span>
+            <span className="hidden sm:block ">
+              This made us have a customer base that is very stable with a lot
+              of extremely long-term customer relationship that is based on our
+              constant ability to provide exceptional service.
+            </span>
           </p>
 
           <button
@@ -36,7 +40,7 @@ const OurCompany = () => {
           >
             Know More
           </button>
-        </section>
+        </motion.section>
       </section>
     </>
   );
