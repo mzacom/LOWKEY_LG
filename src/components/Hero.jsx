@@ -82,13 +82,13 @@ const Hero = () => {
           {/* Phase 2 */}
           {/* Truck Image Container */}
           <div className="App w-full md:w-1/2 lg:w-1/2 xl:w-1/3">
-            <Suspense fallback={<Placeholder />}>
-              <ImageComponent
+            
+              <img
                 className="h-auto"
                 src={heroTruck}
                 alt="Your Image"
               />
-            </Suspense>
+            
           </div>
         </section>
       </section>

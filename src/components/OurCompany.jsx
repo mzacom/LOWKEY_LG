@@ -12,9 +12,7 @@ const OurCompany = () => {
           backgroundImage: `linear-gradient(to right, rgba(0, 255, 0, 0.292), rgba(0, 255, 0, 0.297)), url(${deliveryImg})`,
         }}
       >
-        <motion.section
-          whileInView={{ y: [80, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.2, delay: 0.2 }}
+        <section
           className={` ${styles.paddingY} card2 flex md:gap-[30px] md:p-[6rem] gap-2 items-center flex-col w-full h-auto p-[40px] py-[30px] `}
         >
           <p className={`${styles.boldText100}  text- mt-[5px] `}>
@@ -40,7 +38,7 @@ const OurCompany = () => {
           >
             Know More
           </button>
-        </motion.section>
+        </section>
       </section>
     </>
   );
