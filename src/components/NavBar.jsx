@@ -136,14 +136,16 @@ const NavBar = () => {
         } fixed flex-col`}
       >
         {navLinks.map((navs) => (
-          <NavLink
+          <Link
             key={navs.id}
             to={`${navs.path}`}
             activeClassName="bg-lime"
             className="hover:bg-[lime] w-full p-2 rounded-lg text-2xl"
+         
+
           >
             {navs.title}
-          </NavLink>
+          </Link>
         ))}
       </section>
 
