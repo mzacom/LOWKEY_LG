@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <section
-        className={` justify-between items-center  sm:pt-[8rem] py-[2rem]   flex flex-col w-full bg-[lime] ${styles.paddingX2} `}
+        className={` justify-between items-center  sm:pt-[8rem] pt-[2rem]   flex flex-col w-full bg-[lime] ${styles.paddingX2} `}
       >
         <div className="  sm:flex-row  flex justify-between w-full  ">
           {/* logo */}
@@ -37,8 +37,8 @@ const Footer = () => {
           </Link>
         </div>
 
-        {/* Horizontal */}
-        <div className=" mt-[1rem] sm:mt-[70px] h-[2px] bg-slate-200 "></div>
+        {/* Horizontal Line */}
+        <div className="mt-[1rem] hidden sm:flex sm:mt-[70px] w-full h-[2px] bg-slate-200"></div>
 
         <div className=" sm:flex sm:py-[4rem] py-3 justify-between items-center ">
           <p className="  mt-3 sm:mt-0 sm:w-[45%] text-xl">
@@ -48,41 +48,51 @@ const Footer = () => {
             complexity of your operations
           </p>
 
-          <p className="  sm:w-[50%] mt-4 sm:mt-0  text-xl">
+          <p className="  sm:w-[50%] mt-6 sm:mt-0  text-xl">
             <span className="text-3xl w-full justify-between  font-bold">
               Get in touch
             </span>
 
             <p className=" w-full gap-5   mt-2 sm:flex  ">
-              <p className=" flex gap-5 flex-col">
-                <p className=" gap-2 flex items-center">
+              <div className=" flex gap-5 flex-col">
+                <div className=" gap-2 flex items-center">
                   <i className=" fa-solid fa-location "></i>
                   <span>Unit 36, 416 Brixton Road, Ile-Ife Osun</span>
-                </p>
+                </div>
 
-                <p className=" flex items-center gap-2 ">
+                <div className=" flex items-center gap-2 ">
                   <i className="fa-solid fa-clock"></i>
                   <span>24 hours </span>
-                </p>
-              </p>
+                </div>
+              </div>
 
-              <p className=" flex mt-4 sm:mt-0  flex-col gap-2">
-                <p className="flex items-center gap-2" >
+              <div className=" flex mt-4 sm:mt-0  flex-col gap-2">
+                <div className="flex items-center gap-2">
                   <i className="fa-solid fa-phone "></i>
                   <a href="tel:+2349041589381">+2349041589381</a>
-                </p>
+                </div>
 
-                <p className=" flex items-center gap-2 mt-3" >
+                <div className=" flex items-center gap-2 mt-3">
                   <i className="fa-solid fa-envelope   "></i>
-                  <a href="mailto:oyetolamuiz81@gmail.com">oyetolamuiz81@gmail.com</a>
-                </p>
-              </p>
+                  <a href="mailto:oyetolamuiz81@gmail.com">
+                    oyetolamuiz81@gmail.com
+                  </a>
+                </div>
+              </div>
             </p>
           </p>
         </div>
-        
+        {/* Horizontal Line */}
+        <div className="mt-[1rem] sm:mt-[70px] w-full h-[2px] bg-slate-200"></div>
+
+        <div className=" sm:text-[15px] text-xs sm:flex-row gap-2 w-full justify-between flex-col items-center flex p-3 ">
+          <p className=" ">
+            <span className=" text-white  " >©2023 Lowkey </span>
+            Logistics Copyrightr All Right Reserved
+          </p>
+          <p className=" ">Term and Conditions</p>
+        </div>
       </section>
-        
     </>
   );
 };

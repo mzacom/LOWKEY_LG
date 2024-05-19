@@ -45,7 +45,7 @@ const Hero = () => {
               initial={{ y: "-10vh" }}
               animate={{ y: 0 }}
               transition={{ type: "spring", stiffness: 50 }}
-              className={`text-[13px] sm:text-xl font-medium`}
+              className={`text-[15px] sm:text-xl font-medium`}
             >
               Welcome to <span className="text-[lime] font-bold">LOWKEY</span>{" "}
               Logistics

@@ -138,9 +138,9 @@ const NavBar = () => {
         {navLinks.map((navs) => (
           <NavLink
             key={navs.id}
-            to={`#${navs.id}`}
+            to={`${navs.path}`}
             activeClassName="bg-lime"
-            className="hover:bg-lime w-full p-2 rounded-lg text-2xl"
+            className="hover:bg-[lime] w-full p-2 rounded-lg text-2xl"
           >
             {navs.title}
           </NavLink>
