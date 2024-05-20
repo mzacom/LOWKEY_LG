@@ -62,7 +62,7 @@ const Hero = () => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1.5 }}
+              transition={{ duration: 1 }}
               className="mt-2 sm:w-full text-slate-600 lg:w-[90%] xl:w-[70%]"
             >
               Your partner for exceptional logistics and courier services. Get

@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         {/* Horizontal Line */}
-        <div className="mt-[1rem] hidden sm:flex sm:mt-[70px] w-full h-[2px] bg-slate-200"></div>
+        <div className="mt-[1rem] hidden sm:flex sm:mt-[70px] w-full h-[0.5px] bg-slate-200"></div>
 
         <div className=" sm:flex sm:py-[4rem] py-3 justify-between items-center ">
           <p className="  mt-3 sm:mt-0 sm:w-[45%] text-xl">
@@ -83,7 +83,7 @@ const Footer = () => {
           </p>
         </div>
         {/* Horizontal Line */}
-        <div className="mt-[1rem] sm:mt-[70px] w-full h-[2px] bg-slate-200"></div>
+        <div className="mt-[1rem] sm:mt-[70px] w-full h-[0.5px] bg-slate-100"></div>
 
         <div className=" sm:text-[15px] text-xs sm:flex-row gap-2 w-full justify-between flex-col items-center flex p-3 ">
           <p className=" ">
