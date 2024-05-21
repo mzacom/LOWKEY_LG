@@ -1,4 +1,4 @@
-import { useState, React } from "react";
+import { useState } from "react";
 import { NavBar } from "../../components";
 import { motion } from "framer-motion";
 import styles from "../../style";
@@ -123,7 +123,7 @@ const Bookings = () => {
   return (
     <>
       <NavBar />
-      <section className={`pt-[2rem] ${styles.paddingX}`}>
+      <section className={`pt-[0rem] ${styles.paddingX}`}>
         <motion.p
           initial={{ y: "-10vh" }}
           animate={{ y: 0 }}
@@ -142,7 +142,7 @@ const Bookings = () => {
           Bookings
         </motion.p>
 
-        <section className="w-full mt-[5rem] flex justify-center flex-col">
+        <section className="w-full mt-[1rem] flex justify-center flex-col">
           <p className="mb-2 font-thin text-slate-500">
             Fields marked with an{" "}
             <span className="text-red-500 font-bold">*</span> are required
@@ -212,6 +212,7 @@ const Bookings = () => {
               id="collectionDate"
               name="collectionDate"
               className="w-full rounded-2xl focus:border-[lime] outline-none border-[1px] p-2 border-slate-500 mt-1"
+              placeholder="Date"
               onChange={handleChange}
               onBlur={handleBlur}
               value={formInputs.collectionDate}
@@ -247,6 +248,7 @@ const Bookings = () => {
               id="deliveryDate"
               name="deliveryDate"
               className="w-full rounded-2xl focus:border-[lime] outline-none border-[1px] p-2 border-slate-500 mt-1"
+              placeholder="Date"
               onChange={handleChange}
               onBlur={handleBlur}
               value={formInputs.deliveryDate}
