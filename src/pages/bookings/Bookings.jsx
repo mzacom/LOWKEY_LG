@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 import styles from "../../style";
 import axios from "axios";
 import { Footer } from "../../components";
+import {
+  car,
+  LutonVan,
+  MediumSizeVan,
+  motoBike,
+  CurtainSideLuton,
+  smallVan,
+} from "../../assets";
 
 const Bookings = () => {
   // Form state and validation
@@ -27,6 +35,7 @@ const Bookings = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showWaitMessage, setShowWaitMessage] = useState(false);
+  const [selectedVehicle, setSelectedVehicle] = useState("Moto Bike");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -87,6 +96,7 @@ const Bookings = () => {
           collection_date: formInputs.collectionDate,
           delivery_address: formInputs.deliveryAddress,
           delivery_date: formInputs.deliveryDate,
+          selected_vehicle: selectedVehicle, // Add selected vehicle here
         },
       };
 
@@ -112,6 +122,7 @@ const Bookings = () => {
           deliveryAddress: "",
           deliveryDate: "",
         });
+        setSelectedVehicle("Moto Bike"); // Reset the selected vehicle
         setIsSubmitted(false);
       }, 6000);
     } else {
@@ -119,7 +130,31 @@ const Bookings = () => {
     }
   };
 
+  const handleVehicleChange = (e) => {
+    setSelectedVehicle(e.target.value);
+  };
+
   const isFormValid = !Object.values(error).some((err) => err);
+
+  const getVehicleImage = () => {
+    switch (selectedVehicle) {
+      case "Moto Bike":
+        return motoBike;
+      case "Car":
+        return car;
+      case "Small Van":
+        return smallVan;
+      case "Medium Size Van":
+        return MediumSizeVan;
+      case "Curtain Side Luton":
+        return CurtainSideLuton;
+      case "Luton Van":
+        return LutonVan;
+      default:
+        return motoBike;
+    }
+  };
+
   return (
     <>
       <NavBar />
@@ -137,7 +172,7 @@ const Bookings = () => {
           initial={{ y: "3vh" }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className=" text-2xl font-semibold text-[lime] "
+          className="text-2xl font-semibold text-[lime] "
         >
           Bookings
         </motion.p>
@@ -148,7 +183,7 @@ const Bookings = () => {
             <span className="text-red-500 font-bold">*</span> are required
           </p>
 
-          <form className=" flex flex-col gap-1" onSubmit={handleSubmit}>
+          <form className="flex flex-col gap-1" onSubmit={handleSubmit}>
             <label className="font-bold" htmlFor="name">
               Name <span className="text-red-500 font-bold">*</span>
             </label>
@@ -258,6 +293,38 @@ const Bookings = () => {
                 This is a required field
               </p>
             )}
+            <label className="font-bold mt-4" htmlFor="selectedVehicle">
+              Select Vehicle <span className="text-red-500 font-bold">*</span>
+            </label>
+            <select
+              className="p-2 border-[1px] rounded-2xl outline-none focus:border-[lime]"
+              value={selectedVehicle}
+              onChange={handleVehicleChange}
+            >
+              <option value="Moto Bike">Moto Bike</option>
+              <option value="Car">Car</option>
+              <option value="Small Van">Small Van</option>
+              <option value="Medium Size Van">Medium Size Van</option>
+              <option value="Curtain Side Luton">Curtain Side Luton</option>
+              <option value="Luton Van">Luton Van</option>
+              <option value="Long Wheel Base Van">Long Wheel Base Van</option>
+            </select>
+            <div className="  h-[400px] mb-6  flex flex-col p-3 mt-3 justify-center items-center selectV">
+              <motion.img
+                initial={{ y: "-10vh" }}
+                animate={{ y: 0 }}
+                src={getVehicleImage()}
+                className=" w-full "
+                alt={selectedVehicle}
+              />
+              <motion.p
+                initial={{ y: "3vh" }}
+                className="text-xl "
+                animate={{ y: 0 }}
+              >
+                {selectedVehicle}
+              </motion.p>
+            </div>
             <label className="font-bold" htmlFor="description">
               Description of Delivery{" "}
               <span className="text-red-500 font-bold">*</span>
@@ -272,18 +339,18 @@ const Bookings = () => {
               value={formInputs.description}
             />
             {error.description && (
-              <p className="  flex text-xs text-red-500">
+              <p className="flex text-xs text-red-500">
                 This is a required field
               </p>
             )}
             {showWaitMessage && (
               <p className="text-[12px] font-thin">Please wait...</p>
-            )}{" "}
+            )}
             <button
               type="submit"
               className={`mt-4 mb-6 p-2 w-[100px] sm:h-[60px] text-white rounded-2xl ${
                 isFormValid ? "bg-[lime]" : "bg-slate-300 "
-              }   `}
+              }`}
               disabled={!isFormValid}
             >
               Submit
