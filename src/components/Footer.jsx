@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <>
       <section
-        className={` justify-between items-center  sm:pt-[8rem] pt-[2rem]   flex flex-col w-full bg-[lime] ${styles.paddingX2} `}
+        className={` justify-between items-center  md:pt-[8rem] pt-[2rem]   flex flex-col w-full bg-[lime] ${styles.paddingX2} `}
       >
-        <div className="  sm:flex-row  flex justify-between w-full  ">
+        <div className="  md:flex-row  flex justify-between w-full  ">
           {/* logo */}
           <p
-            className={` hidden sm:flex   items-center ${styles.boldText} ${styles.whiteBg} ${styles.blackTx} ${styles.btnPadding}`}
+            className={` hidden md:flex    items-center ${styles.boldText} ${styles.whiteBg} ${styles.blackTx} ${styles.btnPadding}`}
           >
             LOWKEY
           </p>
@@ -21,7 +21,7 @@ const Footer = () => {
           {navLinks.map((navs) => {
             return (
               <Link
-                className=" hidden sm:flex text-xl font-semibold  hover:text-slate-500 bg-[lime] p-3 items-center justify-center rounded-full px-[2rem] "
+                className=" hidden md:flex text-xl font-semibold  hover:text-slate-500 bg-[lime] p-3 items-center justify-center rounded-full px-[2rem] "
                 key={navs.id}
                 to={`${navs.path}`}
               >
@@ -31,24 +31,24 @@ const Footer = () => {
           })}
 
           <Link
-            className={` hidden sm:flex  ${styles.greyBg} flex justify-center items-center text-xl font-semibold  ${styles.btnPadding}`}
+            className={` hidden md:flex  ${styles.greyBg} flex justify-center items-center text-xl font-semibold  ${styles.btnPadding}`}
           >
             Book Now
           </Link>
         </div>
 
         {/* Horizontal Line */}
-        <div className="mt-[1rem] hidden sm:flex sm:mt-[70px] w-full h-[0.5px] bg-slate-200"></div>
+        <div className="mt-[1rem] hidden md:flex md:mt-[70px] w-full h-[0.5px] bg-slate-200"></div>
 
-        <div className=" sm:flex sm:py-[4rem] py-3 justify-between items-center ">
-          <p className="  mt-3 sm:mt-0 sm:w-[45%] text-xl">
+        <div className=" md:flex md:py-[4rem] py-3 justify-between items-center ">
+          <p className="  mt-3 md:mt-0 md:w-[45%] text-xl">
             <span className="text-3xl font-bold">LOWKEY Logistics</span>
             <br /> We are dedicated to providing seamless logistics solutions
             tailored to meeting your specific needs no matter the size or
             complexity of your operations
           </p>
 
-          <p className="  sm:w-[50%] mt-6 sm:mt-0  text-xl">
+          <p className="  md:w-[50%] mt-6 md:mt-0  text-xl">
             <span className="text-3xl w-full justify-between  font-bold">
               Get in touch
             </span>
@@ -83,7 +83,7 @@ const Footer = () => {
           </p>
         </div>
         {/* Horizontal Line */}
-        <div className="mt-[1rem] sm:mt-[70px] w-full h-[0.5px] bg-slate-100"></div>
+        <div className="mt-[1rem] md:mt-[70px] w-full h-[0.5px] bg-slate-100"></div>
 
         <div className=" sm:text-[15px] text-xs sm:flex-row gap-2 w-full justify-between flex-col items-center flex p-3 ">
           <p className=" ">

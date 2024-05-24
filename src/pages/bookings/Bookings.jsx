@@ -158,12 +158,14 @@ const Bookings = () => {
   return (
     <>
       <NavBar />
-      <section className={`pt-[0rem] ${styles.paddingX}`}>
+      <section
+        className={`pt-[0rem]  w-full justify-center it ${styles.paddingX}`}
+      >
         <motion.p
           initial={{ y: "-10vh" }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="pt-[6rem] "
+          className=" md:ml-[5.5rem] sm:ml-[2rem] md:text-xl pt-[6rem] "
         >
           Welcome to
         </motion.p>
@@ -172,18 +174,21 @@ const Bookings = () => {
           initial={{ y: "3vh" }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="text-2xl font-semibold text-[lime] "
+          className="text-2xl md:ml-[5.5rem] sm:ml-[2rem]  font-semibold md:text-4xl text-[lime] "
         >
           Bookings
         </motion.p>
 
-        <section className="w-full mt-[1rem] flex justify-center flex-col">
-          <p className="mb-2 font-thin text-slate-500">
+        {/* Bookings Inputs  */}
+        <section className=" w-full sm:w-[90%] mx-auto mt-[1rem]   flex justify-center flex-col">
+          <p className="mb-2 font-thin md:text-x text-slate-500">
             Fields marked with an{" "}
             <span className="text-red-500 font-bold">*</span> are required
           </p>
 
-          <form className="flex flex-col gap-1" onSubmit={handleSubmit}>
+          <form className="flex md:flex-row  md:justify-between md:gap-[rem]  w-full flex-col gap-1" onSubmit={handleSubmit}>
+            {/* Phase 1 */}
+            <div className=" md:flex md:flex-col md:w-[45%] " >
             <label className="font-bold" htmlFor="name">
               Name <span className="text-red-500 font-bold">*</span>
             </label>
@@ -293,68 +298,73 @@ const Bookings = () => {
                 This is a required field
               </p>
             )}
-            <label className="font-bold mt-4" htmlFor="selectedVehicle">
-              Select Vehicle <span className="text-red-500 font-bold">*</span>
-            </label>
-            <select
-              className="p-2 border-[1px] rounded-2xl outline-none focus:border-[lime]"
-              value={selectedVehicle}
-              onChange={handleVehicleChange}
-            >
-              <option value="Moto Bike">Moto Bike</option>
-              <option value="Car">Car</option>
-              <option value="Small Van">Small Van</option>
-              <option value="Medium Size Van">Medium Size Van</option>
-              <option value="Curtain Side Luton">Curtain Side Luton</option>
-              <option value="Luton Van">Luton Van</option>
-              <option value="Long Wheel Base Van">Long Wheel Base Van</option>
-            </select>
-            <div className="  h-[400px] mb-6  flex flex-col p-3 mt-3 justify-center items-center selectV">
-              <motion.img
-                initial={{ y: "-10vh" }}
-                animate={{ y: 0 }}
-                src={getVehicleImage()}
-                className=" w-full "
-                alt={selectedVehicle}
-              />
-              <motion.p
-                initial={{ y: "3vh" }}
-                className="text-xl "
-                animate={{ y: 0 }}
-              >
-                {selectedVehicle}
-              </motion.p>
             </div>
-            <label className="font-bold" htmlFor="description">
-              Description of Delivery{" "}
-              <span className="text-red-500 font-bold">*</span>
-            </label>
-            <textarea
-              id="description"
-              name="description"
-              className="w-full rounded-2xl focus:border-[lime] h-[140px] outline-none border-[1px] p-2 border-slate-500 mt-1"
-              placeholder="e.g: Your message here"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={formInputs.description}
-            />
-            {error.description && (
-              <p className="flex text-xs text-red-500">
-                This is a required field
-              </p>
-            )}
-            {showWaitMessage && (
-              <p className="text-[12px] font-thin">Please wait...</p>
-            )}
-            <button
-              type="submit"
-              className={`mt-4 mb-6 p-2 w-[100px] sm:h-[60px] text-white rounded-2xl ${
-                isFormValid ? "bg-[lime]" : "bg-slate-300 "
-              }`}
-              disabled={!isFormValid}
-            >
-              Submit
-            </button>
+
+            {/* Phase 2 */}
+            <div className=" flex flex-col md:w-[40%]   " >
+              <label className="font-bold " htmlFor="selectedVehicle">
+                Select Vehicle <span className="text-red-500 font-bold">*</span>
+              </label>
+              <select
+                className="p-2 border-[1px] rounded-2xl outline-none focus:border-[lime]"
+                value={selectedVehicle}
+                onChange={handleVehicleChange}
+              >
+                <option value="Moto Bike">Moto Bike</option>
+                <option value="Car">Car</option>
+                <option value="Small Van">Small Van</option>
+                <option value="Medium Size Van">Medium Size Van</option>
+                <option value="Curtain Side Luton">Curtain Side Luton</option>
+                <option value="Luton Van">Luton Van</option>
+                <option value="Long Wheel Base Van">Long Wheel Base Van</option>
+              </select>
+              <div className=" md:h-[300px] h-[350px]  mb-6  flex flex-col p-3 mt-3 justify-center  items-center selectV">
+                <motion.img
+                  initial={{ y: "-10vh" }}
+                  animate={{ y: 0 }}
+                  src={getVehicleImage()}
+                  className=" md:w-[300px] sm:h-[300px] w-full sm:w-[300px] "
+                  alt={selectedVehicle}
+                />
+                <motion.p
+                  initial={{ y: "3vh" }}
+                  className="text-xl mb-4 "
+                  animate={{ y: 0 }}
+                >
+                  {selectedVehicle}
+                </motion.p>
+              </div>
+              <label className="font-bold" htmlFor="description">
+                Description of Delivery{" "}
+                <span className="text-red-500 font-bold">*</span>
+              </label>
+              <textarea
+                id="description"
+                name="description"
+                className="w-full rounded-2xl focus:border-[lime] h-[140px] outline-none border-[1px] p-2 border-slate-500 mt-1"
+                placeholder="e.g: Your message here"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={formInputs.description}
+              />
+              {error.description && (
+                <p className="flex text-xs  text-red-500">
+                  This is a required field
+                </p>
+              )}
+              {showWaitMessage && (
+                <p className="text-[12px] font-thin">Please wait...</p>
+              )}
+              <button
+                type="submit"
+                className={`mt-4 mb-6 p-2 w-[100px] sm:h-[60px] text-white rounded-2xl ${
+                  isFormValid ? "bg-[lime]" : "bg-slate-300 "
+                }`}
+                disabled={!isFormValid}
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </section>
       </section>

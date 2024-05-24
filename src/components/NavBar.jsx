@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <>
       <section
-        className={`${styles.spaceBtw} z-[150] fixed w-full ${styles.whiteBg} ${styles.paddingY}`}
+        className={`${styles.spaceBtw} z-[150] blury  fixed w-full   ${styles.paddingY}`}
       >
         {/* logo */}
         <p
@@ -135,18 +135,24 @@ const NavBar = () => {
           toggle? "flex" : "hidden"
         } fixed flex-col`}
       >
-        {navLinks.map((navs) => (
-          <Link
-            key={navs.id}
-            to={`${navs.path}`}
-            activeClassName="bg-lime"
-            className="hover:bg-[lime] w-full p-2 rounded-lg text-2xl"
+        <ul className=" w-full p-2 flex flex-col gap-2 " >
+          {navLinks.map((navs)=>{
+            return (<li className="w-ful  " key={navs.id} >
+              <NavLink 
+              to={navs.path}
+              
+                className={({isActive}) => isActive ? "bg-[lime] w-[80%] p-2 rounded-lg text-2xl " : " w-[80%] p-2 rounded-lg text-2xl"}
+              >
+                {navs.title}
+              </NavLink>
+            </li>)
+          })}
+        </ul>
+       
+          
          
 
-          >
-            {navs.title}
-          </Link>
-        ))}
+         
       </section>
 
       {/* overlay */}
