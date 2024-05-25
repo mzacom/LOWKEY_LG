@@ -3,6 +3,7 @@ import styles from "../style";
 import { navLinks } from "../constants";
 import { NavLink, Link } from "react-router-dom";
 
+
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -20,7 +21,7 @@ const NavBar = () => {
 
         {/* Nav Bar list Desktop */}
         <section
-          className={`items-center flex ${styles.hidden2} md:gap-[11rem] sm:gap-[3.5rem] xl:gap-[10rem] `}
+          className={`items-center flex ${styles.hidden2} md:gap-[9rem] sm:gap-[3rem] xl:gap-[11rem] `}
         >
           <NavLink
             to="/"
@@ -53,6 +54,17 @@ const NavBar = () => {
             className="flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
           >
             Fleets
+          </NavLink>
+
+          <NavLink
+            to="/services"
+            style={({ isActive }) => ({
+              color: isActive ? "lime" : "black",
+              fontWeight: isActive ? "bold" : "normal",
+            })}
+            className="flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
+          >
+           Services
           </NavLink>
 
           <NavLink
@@ -121,7 +133,7 @@ const NavBar = () => {
       <section
         className={`  ${
           toggle ? "flex" : "hidden"
-        } fixed flex-col  w-[170px] h-[250px] z-[150] text-2xl gap-4 justify-center items-center  flex card right-[1rem] top-[4rem] sm:hidden md:hidden  `}
+        } fixed flex-col  w-[170px] h-[270px] z-[150] text-2xl gap-4 justify-center items-center  flex card right-[1rem] top-[4rem] sm:hidden md:hidden  `}
       >
         <NavLink
           to="/"
@@ -168,6 +180,20 @@ const NavBar = () => {
         </NavLink>
 
         <NavLink
+          to="/services"
+          style={({ isActive }) => ({
+            background: isActive ? " lime " : " none ",
+            width: isActive ? " 80% " : " none ",
+            borderRadius: isActive ? " 10px " : " none",
+           padding: isActive ? " 20px " : " none",
+           
+          })}
+          className="flex items-center justify-center rounded-full w-[35px] h-[35px] p-1"
+        >
+          Services
+        </NavLink>
+
+        <NavLink
           to="/contactUs"
           style={({ isActive }) => ({
             background: isActive ? " lime " : " none ",
@@ -191,6 +217,7 @@ const NavBar = () => {
           toggle ? "fixed z-[100]" : "hidden"
         } bg-none ${styles.hidden}`}
       ></div>
+      
     </>
   );
 };

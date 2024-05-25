@@ -20,9 +20,15 @@ const ServicesH = () => {
       className={`flex items-center justify-center py-[1rem] flex-col sm:h-[650px] h-[500px] ${styles.whiteBg} `}
     >
       <div className=" flex w-full p-4 justify-between sm:px-[5rem]    items-center  ">
-        <h1 className=" text-xl mb-[1rem] font-bold md:text-4xl   ">Our Service</h1>
+        <h1 className=" text-xl mb-[1rem] font-bold md:text-4xl   ">
+          Our Service
+        </h1>
 
-       
+        <Link to={"services"} className=" text-xl mb-[1rem] fa-solid fa-chevron-right font-extrabold md:text-4xl   ">
+          
+        </Link>
+
+        
       </div>
 
       <Swiper

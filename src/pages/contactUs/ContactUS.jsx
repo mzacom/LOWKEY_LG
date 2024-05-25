@@ -2,6 +2,7 @@ import React from "react";
 import { NavBar, Get, Message, Footer } from "../../components";
 import { motion } from "framer-motion";
 import styles from "../../style";
+import Soc from "../../components/Soc";
 
 const ContactUS = () => {
   return (
@@ -21,6 +22,7 @@ const ContactUS = () => {
       >
         <Get />
       </section>
+      <Soc/>
       <Footer />
     </>
   );

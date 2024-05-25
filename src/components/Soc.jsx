@@ -16,7 +16,7 @@ const Soc = () => {
           >
             {" "}
             <i className=" fa-brands text-green-600 fa-whatsapp"></i> Whatsapp
-          </motion.a>
+          </motion.a> 
 
           <motion.a
             href=" https://www.instagram.com/low.key_dev?igsh=MWl4NXk5OTJ2aXBmNw%3D%3D&utm_source=qr"
