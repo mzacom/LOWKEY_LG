@@ -33,7 +33,7 @@ const Soc = () => {
         <i
           className={`${
             toggleSoc ? "fa-xmark" : "fa-message "
-          } fa-solid  bg-[lime] w-[70px] flex cursor-pointer items-center justify-center h-[70px] rounded-full text-3xl animate-pulse `}
+          } fa-solid  bg-[lime] w-[60px] flex cursor-pointer items-center justify-center h-[60px] rounded-full text-2xl animate-pulse `}
           onClick={() => setToggleSoc(!toggleSoc)}
         ></i>
       </section>
