@@ -10,6 +10,7 @@ import {
   Footer,
   OurCompany,
 } from "../../components";
+import Soc from "../../components/Soc";
 
 import styles from "../../style";
 
@@ -32,6 +33,8 @@ const Home = () => {
         <Why />
         <Get />
         <Footer/>
+        <Soc/>
+
       </section>
     </>
   );

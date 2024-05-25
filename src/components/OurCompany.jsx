@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../style";
 import { deliveryImg } from "../assets";
-import { motion } from "framer-motion";
 
 const OurCompany = () => {
   return (
@@ -34,7 +33,7 @@ const OurCompany = () => {
           </p>
 
           <button
-            className={`${styles.btnPadding} animate-bounce mt-[20px] bg-[lime] md:p-5 font-medium md:text-2xl md:font-bold `}
+            className={`${styles.btnPadding}  mt-[20px] bg-[lime] md:p-5 font-medium md:text-2xl md:font-bold `}
           >
             Know More
           </button>

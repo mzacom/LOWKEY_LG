@@ -42,14 +42,14 @@ const Footer = () => {
 
         <div className=" md:flex md:py-[4rem] py-3 justify-between items-center ">
           <p className="  mt-3 md:mt-0 md:w-[45%] text-xl">
-            <span className="text-3xl font-bold">LOWKEY Logistics</span>
+            <span className="text-2xl font-bold">LOWKEY Logistics</span>
             <br /> We are dedicated to providing seamless logistics solutions
             tailored to meeting your specific needs no matter the size or
             complexity of your operations
           </p>
 
           <p className="  md:w-[50%] mt-6 md:mt-0  text-xl">
-            <span className="text-3xl w-full justify-between  font-bold">
+            <span className="text-2xl w-full justify-between  font-bold">
               Get in touch
             </span>
 

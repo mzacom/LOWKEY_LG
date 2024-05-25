@@ -15,11 +15,6 @@ export const navLinks = [
     path: "bookings",
   },
   {
-    id: "services",
-    title: "Services",
-    path: "services",
-  },
-  {
     id: "contactUS",
     title: "Contact Us",
     path: "contactUs",

@@ -206,3 +206,10 @@ label{
   background: rgba(251, 251, 251, 0.189);
   
 }
+
+.fleets{
+  border-radius: 28px;
+background: linear-gradient(145deg, #ffffff, #ffffff);
+box-shadow:  10px 10px 93px #d1d1d1,
+             -10px -10px 93px #ffffff;
+}

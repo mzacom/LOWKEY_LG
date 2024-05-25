@@ -19,7 +19,7 @@ const IntoBtns = () => {
         </Link>
         <Link
           to={"contactUs"}
-          className={` bg-[lime] ${styles.btnPadding} sm:p-[20px] px-[15px] sm:px-[20px] `}
+          className={` bg-[lime] ${styles.btnPadding} items-center justify-center sm:p-[20px] px-[15px] sm:px-[20px] `}
         >
           Contact Us
         </Link>

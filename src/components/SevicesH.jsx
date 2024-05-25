@@ -22,9 +22,7 @@ const ServicesH = () => {
       <div className=" flex w-full p-4 justify-between sm:px-[5rem]    items-center  ">
         <h1 className=" text-xl mb-[1rem] font-bold md:text-4xl   ">Our Service</h1>
 
-        <Link to={"services"}>
-          <i className=" fa-solid fa-angle-right md:text-4xl   text-xl font-bold "></i>
-        </Link>
+       
       </div>
 
       <Swiper

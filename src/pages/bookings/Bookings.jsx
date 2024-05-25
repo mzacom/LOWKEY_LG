@@ -12,6 +12,7 @@ import {
   CurtainSideLuton,
   smallVan,
 } from "../../assets";
+import Soc from "../../components/Soc";
 
 const Bookings = () => {
   // Form state and validation
@@ -161,26 +162,19 @@ const Bookings = () => {
       <section
         className={`pt-[0rem]  w-full justify-center it ${styles.paddingX}`}
       >
-        <motion.p
-          initial={{ y: "-10vh" }}
-          animate={{ y: 0 }}
-          transition={{ type: "spring", stiffness: 50 }}
-          className=" md:ml-[5.5rem] sm:ml-[2rem] md:text-xl pt-[6rem] "
-        >
-          Welcome to
-        </motion.p>
+       
 
         <motion.p
-          initial={{ y: "3vh" }}
+          initial={{ y: "-11vh" }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="text-2xl md:ml-[5.5rem] sm:ml-[2rem]  font-semibold md:text-4xl text-[lime] "
+          className="text-2xl text-center md:ml-[5.5rem] sm:ml-[2rem] pt-[5rem] md:pt-[7rem] font-semibold md:text-4xl text-[lime] "
         >
           Bookings
         </motion.p>
 
         {/* Bookings Inputs  */}
-        <section className=" w-full sm:w-[90%] mx-auto mt-[1rem]   flex justify-center flex-col">
+        <section className=" w-full sm:w-[90%] mx-auto mt-[2rem]   flex justify-center flex-col">
           <p className="mb-2 font-thin md:text-x text-slate-500">
             Fields marked with an{" "}
             <span className="text-red-500 font-bold">*</span> are required
@@ -188,8 +182,8 @@ const Bookings = () => {
 
           <form className="flex md:flex-row  md:justify-between md:gap-[rem]  w-full flex-col gap-1" onSubmit={handleSubmit}>
             {/* Phase 1 */}
-            <div className=" md:flex md:flex-col md:w-[45%] " >
-            <label className="font-bold" htmlFor="name">
+            <div className=" flex  flex-col md:w-[45%] " >
+            <label className=" mt-0 font-bold" htmlFor="name">
               Name <span className="text-red-500 font-bold">*</span>
             </label>
             <input
@@ -316,9 +310,9 @@ const Bookings = () => {
                 <option value="Medium Size Van">Medium Size Van</option>
                 <option value="Curtain Side Luton">Curtain Side Luton</option>
                 <option value="Luton Van">Luton Van</option>
-                <option value="Long Wheel Base Van">Long Wheel Base Van</option>
+                
               </select>
-              <div className=" md:h-[300px] h-[350px]  mb-6  flex flex-col p-3 mt-3 justify-center  items-center selectV">
+              <div className=" md:h-[300px] h-[320px]  mb-6  flex flex-col mt-3 justify-between p-[2rem]  items-center selectV">
                 <motion.img
                   initial={{ y: "-10vh" }}
                   animate={{ y: 0 }}
@@ -341,7 +335,7 @@ const Bookings = () => {
               <textarea
                 id="description"
                 name="description"
-                className="w-full rounded-2xl focus:border-[lime] h-[140px] outline-none border-[1px] p-2 border-slate-500 mt-1"
+                className="w-full rounded-2xl focus:border-[lime] h-[120px] outline-none border-[1px] p-2 border-slate-500 mt-1"
                 placeholder="e.g: Your message here"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -369,6 +363,7 @@ const Bookings = () => {
         </section>
       </section>
       <Footer />
+      <Soc/>
     </>
   );
 };
