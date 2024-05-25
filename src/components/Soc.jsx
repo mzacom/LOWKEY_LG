@@ -7,7 +7,7 @@ const Soc = () => {
   return (
     <>
       <section className=" fixed flex flex-col items-end  gap-3 z-[100] bottom-[2rem] right-[1rem] ">
-        <div className={` ${toggleSoc ? "flex" : "hidden"} flex-col text-[16px]  gap-2`}>
+        <div className={` ${toggleSoc ? "flex" : "hidden"} flex-col text-[19px]  gap-2`}>
           <motion.a
             href=" https://wa.me/2349041589381"
             whileInView={{ y: [80, 0], opacity: [0, 1] }}
@@ -33,7 +33,7 @@ const Soc = () => {
         <i
           className={`${
             toggleSoc ? "fa-xmark" : "fa-message "
-          } fa-solid  bg-[lime] w-[50px] flex cursor-pointer items-center justify-center h-[50px] rounded-full text-2xl animate-pulse `}
+          } fa-solid  bg-[lime] w-[70px] flex cursor-pointer items-center justify-center h-[70px] rounded-full text-3xl animate-pulse `}
           onClick={() => setToggleSoc(!toggleSoc)}
         ></i>
       </section>
