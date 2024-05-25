@@ -1,12 +1,29 @@
-import React from 'react'
-import { NavBar } from '../../components'
+import React from "react";
+import { NavBar, Get, Message, Footer } from "../../components";
+import { motion } from "framer-motion";
+import styles from "../../style";
 
 const ContactUS = () => {
   return (
     <>
-    <NavBar/>
-    </>
-  )
-}
+      <NavBar />
+      <motion.p
+        initial={{ y: "-11vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 50 }}
+        className="text-2xl md:ml-[5.5rem] text-center  sm:ml-[2rem] sm:pt-[6rem] pt-[5rem] font-semibold md:text-4xl text-[lime] "
+      >
+        Contact Us
+      </motion.p>
 
-export default ContactUS
+      <section
+        className={`  w-full    pb-[4rem]  ${styles.paddingX}`}
+      >
+        <Get />
+      </section>
+      <Footer />
+    </>
+  );
+};
+
+export default ContactUS;

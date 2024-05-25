@@ -113,7 +113,7 @@ const Message = () => {
         </p>
 
         <form className="flex flex-col gap-1" onSubmit={handleSubmit}>
-          <label className="font-bold" htmlFor="name">
+          <label className="font-bold- mt-0  " htmlFor="name">
             Name <span className="text-red-500 font-bold">*</span>
           </label>
           <input
