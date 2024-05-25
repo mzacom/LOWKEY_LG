@@ -23,7 +23,7 @@ const Serv = () => {
        transition={{ duration: 0.5, delay: 0.1 }}
         className={`   w-full  gap-4 flex flex-col  py-[3rem]   pb-[4rem]  ${styles.paddingX}`}
       >
-        <div className=" mt-[2rem] gap-3 sm:gap-[2rem] sm:grid-cols-2 grid grid-cols-1 w-full   ">
+        <div className="gap-3 sm:gap-[2rem] sm:grid-cols-2 grid grid-cols-1 w-full   ">
           <img
             src={deliverToday}
             className=" mx-auto w-[95%] rounded-2xl shadow-lg sm:h-[500px] h-[300px]   "
