@@ -103,7 +103,7 @@ const Serv = () => {
             <span className=" sm:text-3xl font-extrabold my-3 text-xl">
               Overnight Delivery
             </span>
-            ASL logistics is always available whenever you need any parcel or
+           LOWKEY logistics is always available whenever you need any parcel or
             shipment to be delivered urgently overnight. Our overnight courier
             service is a dedicated nationwide delivery service which is ready to
             respond to our customer’s rapid and critical needs to get a
