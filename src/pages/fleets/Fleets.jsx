@@ -11,6 +11,7 @@ import {
   CurtainSideLuton,
   smallVan,
 } from "../../assets";
+import Soc from "../../components/Soc";
 
 const Fleets = () => {
   return (
@@ -82,6 +83,7 @@ const Fleets = () => {
         </motion.div>
       </section>
       <Footer/>
+      <Soc/>
     </>
   );
 };

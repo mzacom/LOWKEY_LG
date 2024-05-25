@@ -7,7 +7,7 @@ const Soc = () => {
   return (
     <>
       <section className=" fixed flex flex-col items-end  gap-3 z-[100] bottom-[2rem] right-[1rem] ">
-        <div className={` ${toggleSoc ? "flex" : "hidden"} flex-col  gap-2`}>
+        <div className={` ${toggleSoc ? "flex" : "hidden"} flex-col text-[16px]  gap-2`}>
           <motion.a
             href=" https://wa.me/2349041589381"
             whileInView={{ y: [80, 0], opacity: [0, 1] }}
